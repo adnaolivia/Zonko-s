@@ -14,7 +14,7 @@ public class Main {
     int opcao = 0;
 
     while (opcao != 9) {
-      System.out.println(".｡..｡..｡..｡..｡..｡..｡..｡..｡..｡..｡..");
+      System.out.println(".｡..｡..｡..｡..｡..｡..｡..｡..｡..｡..｡.");
       System.out.println(" ");
       System.out.println("☆*:.｡.Bem Vindo a Zonko's.｡.:*☆");
       System.out.println("Escolha uma opção:");
