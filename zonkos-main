@@ -70,34 +70,3 @@ public class Main {
     }
   }
 } 
-/*class Main {
-  private static List<Usuario> usuarios;
-  private static List<Produto> produtos;
-  private static List<Pedidos> pedidos;
-  
-  public static void main(String[] args) {
-    System.out.println("Bemvindo!");
-    // Logar ou criar um novo usuario
-    Usuario user= new Usuario("joao", "joao@email.com", "999");
-        usuarios.add(user);
-     switch (key) {
-            case 1: 
-                break;
-            case 2:
-                break;
-        }
-    // Exibir opçoes:
-    private static void menu() {
-      System.out.println("Bem Vindo");
-      System.out.println("1 - login");
-      System.out.println("2 - adicionar")
-    }
-      // Listar produtos (com quantidade)
-      // Incluir produto no carrinho
-      // Remover do carrinho
-      // Finalizar compra (criar pedido com os itens do carrinho)
-      // Listar pedidos
-      // Deslogar
-  }
-}
-*/
