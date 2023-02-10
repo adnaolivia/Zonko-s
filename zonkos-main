@@ -14,7 +14,9 @@ public class Main {
     int opcao = 0;
 
     while (opcao != 9) {
-      System.out.println("Bem Vindo a Zonko's!");
+      System.out.println(".｡..｡..｡..｡..｡..｡..｡..｡..｡..｡..｡..");
+      System.out.println(" ");
+      System.out.println("☆*:.｡.Bem Vindo a Zonko's.｡.:*☆");
       System.out.println("Escolha uma opção:");
       System.out.println("1 - Cadastrar usuário");
       System.out.println("2 - Verificar usuário");
@@ -28,7 +30,7 @@ public class Main {
 
       opcao = scan.nextInt();
 
-      switch (opcao) {
+      switch (opcao) { // cadastrar usuario e verificar
         case 1:
           System.out.println("Digite o nome do usuário:");
           String nomeUsuario = scan.next();
@@ -67,6 +69,45 @@ public class Main {
             System.out.println("Usuário inválido");
           }
       }
+      opcao = scan.nextInt();
+
+      switch (opcao) {
+        case 1:
+          Produto produto = new Produto(nomeProduto, precoProduto, qtdestoqueProduto, idProduto);
+          System.out.println("Digite o nome do produto:");
+          String nomeProduto = scan.next();
+          System.out.println("Digite o preço do produto:");
+          int precoProduto = scan.nextInt();
+          System.out.println("Digite a quantidade em estoque:");
+          int qtdestoqueProduto = scan.nextInt();
+          int idProduto = listaProdutos.size() + 1;
+                    break;
+
+                case 2:
+                    Carrinho carrinho = new Carrinho();
+
+                    System.out.print("Digite a quantidade de produtos a ser adicionada ao carrinho: ");
+                    int qtd = scan.nextInt();
+
+                    for (int i = 0; i < qtd; i++) {
+                        System.out.print("Digite o ID do produto: ");
+                        int id = scan.nextInt();
+                        carrinho.adicionarProduto(id);
+                    }
+
+                    listaCarrinhos.add(carrinho);
+                    break;
+
+                case 3:
+                    Pedido pedido = new Pedido();
+
+                    System.out.print("Digite o ID do carrinho: ");
+                    int id = scan.nextInt();
+                    pedido.setPrecoTotal(id);
+
+                    listaPedidos.add(pedido);
+                    break;
+      }
     }
   }
-} 
+}
