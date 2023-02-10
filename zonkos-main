@@ -21,10 +21,10 @@ public class Main {
       System.out.println("1 - Cadastrar usuário");
       System.out.println("2 - Verificar usuário");
       System.out.println("3 - Cadastrar produto");
-      System.out.println("4 - Verificar produto");
+      System.out.println("4 - Listar produto");
       System.out.println("5 - Adicionar produto ao carrinho");
       System.out.println("6 - Remover produto do carrinho");
-      System.out.println("7 - Verificar quantidade de produtos no carrinho");
+      System.out.println("7 - Listar carrinho");
       System.out.println("8 - Fazer pedido");
       System.out.println("9 - Sair");
 
