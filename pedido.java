@@ -1,11 +1,18 @@
-import java.util.ArrayList;
 import java.util.List;
 
-class Pedido {
-    private List<Carrinho> listaCarrinhos = new ArrayList<Carrinho>();
-    Produto precoTotal;
-
-    public List<Carrinho> id() {
-        return listaCarrinhos;
-    }
+public class Pedido {
+  private double precoTotal;
+  private List<Carrinho> carrinhos;
+  
+  public List<Carrinho> getId() {
+    return carrinhos;
+  }
+  
+  public void setPrecoTotal(double precoTotal) {
+    this.precoTotal = precoTotal;
+  }
+  
+  public double getPrecoTotal() {
+    return precoTotal;
+  }
 }
