@@ -1,56 +1,59 @@
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class Usuario {
-  //atributos
-    private String nome;
-    private String email;
-    private int senha;
-    private int id;
+  private String nome;
+  private String email;
+  private int senha;
+  private int id;
 
-    public Usuario(String nome, String email, int senha, int id) {
-        this.nome = nome;
-        this.email = email;
-        this.senha = senha;
-        this.id = id;
-    }
+  public Usuario(String nome, String email, int senha, int id) {
+    this.nome = nome;
+    this.email = email;
+    this.senha = senha;
+    this.id = id;
+  }
 
-    public boolean verfEmail() {
-        // implementação da verificação do email
-        return true;
-    }
+  public String getNome() {
+    return nome;
+  }
 
-    public boolean verfUsuario() {
-        // implementação da verificação do usuário
-        return true;
-    }
+  public void setNome(String nome) {
+    this.nome = nome;
+  }
 
-    public String getNome() {
-        return nome;
-    }
+  public String getEmail() {
+    return email;
+  }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+  public void setEmail(String email) {
+    this.email = email;
+  }
 
-    public String getEmail() {
-        return email;
-    }
+  public int getSenha() {
+    return senha;
+  }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+  public void setSenha(int senha) {
+    this.senha = senha;
+  }
 
-    public int getSenha() {
-        return senha;
-    }
+  public int getId() {
+    return id;
+  }
 
-    public void setSenha(int senha) {
-        this.senha = senha;
-    }
+  public void setId(int id) {
+    this.id = id;
+  }
 
-    public int getId() {
-        return id;
-    }
+  public boolean verificarEmail() {
+    String padrao = "^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)+$";
+    Pattern pattern = Pattern.compile(padrao);
+    Matcher matcher = pattern.matcher(email);
+    return matcher.matches();
+  }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+  public boolean verfUsuario() {
+    return true;
+  }
 }
