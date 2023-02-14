@@ -2,49 +2,44 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Carrinho {
-    private List<Produto> produtos = new ArrayList<>();
+private List<Produto> produtos;
 
-    public int verificarQuantidade(int id) {
-        Produto produto = encontrarProdutoPorId(id);
-        if (produto != null) {
-            return produto.getQtdEstoque();
-        }
-        return 0;
-    }
+public Carrinho() {
+produtos = new ArrayList<>();
+}
 
-    public int somarValorDaCompra() {
-        int soma = 0;
-        for (Produto produto : produtos) {
-            soma += produto.getPreco();
-        }
-        return soma;
-    }
+public int verfQtd(int qtdEstoque) {
+return qtdEstoque;
+}
 
-    public List<Integer> retornaIdProdutos() {
-        List<Integer> ids = new ArrayList<>();
-        for (Produto produto : produtos) {
-            ids.add(produto.getId());
-        }
-        return ids;
-    }
+public int somaValorCompra(Produto preco) {
+int valor = 0;
+for (Produto p : produtos) {
+valor += p.getPreco();
+}
+return valor;
+}
 
-    public void adicionarProduto(Produto produto) {
-        produtos.add(produto);
-    }
+public List<Produto> id() {
+return produtos;
+}
 
-    public void removerProduto(int id) {
-        Produto produto = encontrarProdutoPorId(id);
-        if (produto != null) {
-            produtos.remove(produto);
-        }
-    }
+public Produto adicionarProduto(int id) {
+for (Produto p : produtos) {
+if (p.getId() == id) {
+return p;
+}
+}
+return null;
+}
 
-    private Produto encontrarProdutoPorId(int id) {
-        for (Produto produto : produtos) {
-            if (produto.getId() == id) {
-                return produto;
-            }
-        }
-        return null;
-    }
+public Produto removerProduto(int id) {
+for (Produto p : produtos) {
+if (p.getId() == id) {
+produtos.remove(p);
+return p;
+}
+}
+return null;
+}
 }
